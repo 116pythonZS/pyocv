@@ -4,7 +4,7 @@ import cv2
 import numpy as np 
 from matplotlib import pyplot as plt
 
-img = cv2.imread('xiaomiao.jpg',0)
+img = cv2.imread('xiami.jpg',0)
 
 # 双边滤波
 img2 = cv2.bilateralFilter(img, 9, 75,75)

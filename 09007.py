@@ -4,7 +4,7 @@ import cv2
 import numpy as np 
 from matplotlib import pyplot as plt
 
-img = cv2.imread('xiaomiao.jpg',0)
+img = cv2.imread('xiami.jpg',0)
 
 # 拉普拉斯算子
 laplacian = cv2.Laplacian(img,cv2.CV_64F)
