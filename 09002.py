@@ -1,17 +1,17 @@
 # -*- coding:utf-8 -*-
 
 import cv2
-import numpy as np 
-from matplotlib import pyplot as plt 
+import numpy as np
+from matplotlib import pyplot as plt
 
-BLUE = [255,0,0]
+BLUE = [255, 0, 0]
 img1 = cv2.imread('./roi.jpeg')
 
-replicate = cv2.copyMakeBorder(img1, 10,10,10,10,cv2.BORDER_REPLICATE)
-reflect = cv2.copyMakeBorder(img1, 10,10,10,10,cv2.BORDER_REFLECT)
-reflect101 = cv2.copyMakeBorder(img1, 10,10,10,10,cv2.BORDER_REFLECT_101)
-wrap = cv2.copyMakeBorder(img1, 10,10,10,10,cv2.BORDER_WRAP)
-constant = cv2.copyMakeBorder(img1, 10,10,10,10,cv2.BORDER_CONSTANT, value=BLUE)
+replicate = cv2.copyMakeBorder(img1, 10, 10, 10, 10, cv2.BORDER_REPLICATE)
+reflect = cv2.copyMakeBorder(img1, 10, 10, 10, 10, cv2.BORDER_REFLECT)
+reflect101 = cv2.copyMakeBorder(img1, 10, 10, 10, 10, cv2.BORDER_REFLECT_101)
+wrap = cv2.copyMakeBorder(img1, 10, 10, 10, 10, cv2.BORDER_WRAP)
+constant = cv2.copyMakeBorder(img1, 10, 10, 10, 10, cv2.BORDER_CONSTANT, value=BLUE)
 
 plt.subplot(231), plt.imshow(img1, 'gray'), plt.title("origin")
 plt.subplot(232), plt.imshow(replicate, 'gray'), plt.title("replicate")
